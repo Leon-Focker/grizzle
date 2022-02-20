@@ -1,0 +1,84 @@
+#N canvas 841 305 793 595 12;
+#X text 30 18 JUST A STOPWATCH!;
+#X text 32 566 simon bahr \, 2020;
+#X obj 654 90 r \$0-reset;
+#X obj 569 118 + 1;
+#X floatatom 559 142 5 0 0 0 - - -;
+#X msg 654 130 0;
+#X obj 559 92 f 0;
+#X floatatom 611 205 5 0 0 0 - - -;
+#X obj 536 236 div 60;
+#X obj 609 236 mod 60;
+#X obj 673 212 s \$0-deci;
+#X obj 609 263 s \$0-secs;
+#X obj 536 261 mod 60;
+#X obj 536 287 s \$0-mins;
+#X obj 471 267 div 60;
+#X obj 471 317 s \$0-hours;
+#X obj 424 414 loadbang;
+#X obj 424 439 f \$0;
+#X msg 424 464 symbol \$1-stopwatch;
+#X msg 245 500 \; \$2 label \$1;
+#X obj 360 414 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 188 384 symbol \$4:\$3:\$2.\$1;
+#X obj 188 359 pack 0 0 0 0;
+#X obj 245 474 pack s s;
+#X obj 102 102 bng 118 250 50 0 \$0-reset empty RESET 35 15 0 30 -1
+-1 -1;
+#X obj 216 102 bng 118 250 50 0 \$0-reset empty RESET 35 15 0 30 -262144
+-258113 -262144;
+#X obj 330 101 bng 118 250 50 0 \$0-reset empty empty 35 15 0 30 -262144
+-258113 -262144;
+#X obj 125 256 r \$0-deci;
+#X obj 217 254 r \$0-secs;
+#X obj 291 248 r \$0-mins;
+#X obj 363 254 r \$0-hours;
+#X obj 101 101 cnv 15 348 118 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 384 7 inlet;
+#X obj 383 32 bng 30 250 50 0 \$0-reset empty RESET 35 15 0 30 -1 -1
+-262144;
+#X obj 102 182 cnv 15 1 1 empty \$0-stopwatch 0:0:0.0 20 12 1 65 -1
+-258113 0;
+#X obj 258 104 cnv 15 1 1 empty empty (TAP_TO_RESET) 20 12 0 20 -1
+-262144 0;
+#X obj 471 292 mod 99;
+#X obj 559 67 metro 100;
+#X obj 611 180 div 10;
+#X obj 674 180 mod 10;
+#X obj 627 101 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 2 0 5 0;
+#X connect 2 0 40 0;
+#X connect 3 0 6 1;
+#X connect 4 0 38 0;
+#X connect 4 0 39 0;
+#X connect 5 0 6 1;
+#X connect 6 0 3 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;
+#X connect 7 0 9 0;
+#X connect 8 0 12 0;
+#X connect 8 0 14 0;
+#X connect 9 0 11 0;
+#X connect 12 0 13 0;
+#X connect 14 0 36 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 23 1;
+#X connect 20 0 17 0;
+#X connect 21 0 23 0;
+#X connect 22 0 21 0;
+#X connect 23 0 19 0;
+#X connect 27 0 22 0;
+#X connect 28 0 22 1;
+#X connect 29 0 22 2;
+#X connect 30 0 22 3;
+#X connect 32 0 33 0;
+#X connect 36 0 15 0;
+#X connect 37 0 6 0;
+#X connect 38 0 7 0;
+#X connect 39 0 10 0;
+#X connect 40 0 37 0;
+#X coords 0 -1 1 1 350 120 1 100 100;

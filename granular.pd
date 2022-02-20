@@ -1,0 +1,21 @@
+#N canvas 506 302 679 493 12;
+#X obj 110 261 dac~;
+#X obj 21 10 adc~;
+#X obj 69 154 mdeGranular~;
+#X obj 47 54 *~ 2;
+#X msg 97 45 on;
+#X obj 31 198 drywet~;
+#X obj 282 49 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X obj 88 199 drywet~;
+#X connect 1 1 3 0;
+#X connect 2 0 5 1;
+#X connect 2 1 7 1;
+#X connect 3 0 2 0;
+#X connect 3 0 5 0;
+#X connect 3 0 7 0;
+#X connect 4 0 2 0;
+#X connect 5 0 0 0;
+#X connect 6 0 5 2;
+#X connect 6 0 7 2;
+#X connect 7 0 0 1;

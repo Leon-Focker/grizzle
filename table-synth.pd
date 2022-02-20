@@ -1,0 +1,22 @@
+#N canvas 677 594 543 246 12;
+#X obj 136 171 outlet~;
+#X floatatom 388 110 5 0 0 0 - subfreq -;
+#X text 15 27 oscillators \, multiple voices of wavetable and subbass
+;
+#X obj 452 46 loadbang;
+#X obj 452 72 f \$0;
+#X obj 452 98 s id;
+#X obj 270 92 sub-voice 1 \$1;
+#X obj 277 115 sub-voice 2 \$1;
+#X obj 286 138 sub-voice 3 \$1;
+#X obj 72 59 wave-voice 1 \$1 \$2;
+#X obj 93 82 wave-voice 2 \$1 \$2;
+#X obj 113 105 wave-voice 3 \$1 \$2;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
