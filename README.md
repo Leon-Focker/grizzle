@@ -1,7 +1,7 @@
 # grizzle
 A wavetable instrument for Pure Data, which can transform live input or samples. A multi-voice, user-friendly but also more cpu-heavy version is available as **grizzle**. There is a more light-weight version **grizzle_module** and the super cpu-friendly but rather ugly version **grizzle_slim**.
 
-# grizzle standalone
+## grizzle standalone
 grizzle.pd is the standalone and more cpu heavy version of this instrument. It can modify incoming audio or a sample, that can be loaded into the instrument by making wavetables out of it. It has a maximum of 3 voices.
 
 It is meant to be played with a midi keyboard and midi controllers. To edit the control-bindings, go into subpatch -> utilities -> midi -> controls.
@@ -18,7 +18,7 @@ The feedback, delay and filter effects help, to create a more sustained sound. N
 
 The presets do not work!
 
-# grizzle module
+## grizzle module
 This is a more lightweight version, which is meant to be placed inside other patches, not necessarily as a standalone instrument.
 It can modify an incoming audio signal or a loaded sample (click the dark gray button in the bottom left to load a soundfile). The faders below the array which has the input sample loaded control the start and end boundaries of that sample.
 
@@ -27,7 +27,7 @@ The Volume Fader is on the right, next to the sample arrays. The Toggles labeled
 
 Also try drawing in the phase-distortion array, or choose a preset with the buttons next to it.
 
-# grizzle slim
+## grizzle slim
 This is a super cpu efficient version of grizzle. It has basically no GUI, so if you want to learn how this instrument works, maybe start with one of the other two versions. 
 
 It is basically the same as grizzle module, just without fancy graphics. 
